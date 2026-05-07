@@ -455,7 +455,7 @@ Sizes: XS, S, M, L
 </div>
 
 <div class="buttons">
-  <button onclick="showProduct('custom press-on Nails')">Buy Now</button>
+  <button onclick="open WhatsApp('custom press-on Nails')">Buy Now</button>
 
 <a class="call-btn"
 href="tel:9137394563">
@@ -912,9 +912,15 @@ href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20nails">
 💬
 </a>
 <script>
-function showProduct(name) {
-  alert("You selected: " + name);
+function openWhatsApp(productName) {
+
+  let message = "Hi, I want to order " + productName;
+
+  let url = "https://wa.me/919137394563?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
 }
 </script>
+
 </body>
 </html>
